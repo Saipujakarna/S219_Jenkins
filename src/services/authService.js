@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:9090/ecommerce-1.0.0/auth/signup";
+const API_URL = "http://localhost:9090/ecommerce-1.0.0/auth";
 
 export const login = async (username, password) => {
   const response = await axios.post(`${API_URL}/login`, { username, password });
@@ -9,7 +9,7 @@ export const login = async (username, password) => {
 };
 
 export const signup = async (username, email, password) => {
-  return axios.post(`${API_URL}`, { username, email, password });
+  return axios.post(`${API_URL}/signup`, { username, email, password });
 };
 
 export const logout = () => {
