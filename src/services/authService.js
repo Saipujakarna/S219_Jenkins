@@ -7,6 +7,8 @@ export const login = async (username, password) => {
     "http://localhost:9090/ecommerce-1.0.0/auth/login",
     { username, password }
   );
+  return response; // don't forget to return the response
+};
 
 export const signup = async (username, email, password) => {
   return axios.post(`${API_URL}`, { username, email, password });
